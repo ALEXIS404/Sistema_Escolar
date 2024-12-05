@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('calificacions', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('estudiante_id')->constrained('estudiantes')->onDelete('cascade');
+            $table->foreignId('asignatura_id')->constrained('asignaturas')->onDelete('cascade');
+            $table->foreignId('docente_id')->constrained('docentes')->onDelete('cascade');
+            $table->enum('semestre', ['primer', 'segundo', 'tercero', 'cuarto']);
+            $table->enum('tipo_calificacion', ['parcial', 'final']);
+            $table->decimal('nota', 5, 2);
+            $table->date('fecha_registro');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('calificacions');
+    }
+};
