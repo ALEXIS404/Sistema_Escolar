@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Livewire\EstudianteForm;
 use App\Http\Controllers\ProfileController;
-use App\Livewire\EstudiantesComponent;
+//use App\Http\Livewire\AgregarEstudiantesComponent;
+//use App\Livewire\EstudiantesComponent;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,9 +25,12 @@ Route::middleware('auth')->group(function () {
 
 // Rutas de navegacion de la aplicacion
 Route::middleware('auth')->group(function () {
-    Route::get('/estudiantes', EstudiantesComponent::class )->name('estudiantes');
-    
-   
+
+
+Route::get('/estudiante/form', EstudianteForm::class)->name('estudiante.form');
+
+
 });
+
 
 require __DIR__.'/auth.php';
