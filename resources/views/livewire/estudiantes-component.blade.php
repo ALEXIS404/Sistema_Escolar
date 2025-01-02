@@ -5,7 +5,10 @@
                 Lista de Estudiantes
             </h2>
 
-            
+            <x-link-button class="z-50" :href="route('estudiantes.agregar')">
+                Nuevo Estudiante
+        </x-link-button>
+
         </div>
     </x-slot>
 
@@ -18,5 +21,23 @@
             </div>
         </div>
     </div>
+
+    <x-modal name="editar-estudiante" :show="$estudianteId" focusable>
+        <div class="p-4">
+            <h1 class="-m-4 p-4 bg-red-100 text-red-600 font-bold">¿Estás seguro de eliminar al estudiante?</h1>
+
+            <section>
+                <div class="mt-6 flex justify-end">
+                    <x-secondary-button x-on:click="$dispatch('close')">
+                        Cancelar
+                    </x-secondary-button>
+
+                    <x-danger-button class="ms-3" wire:click="eliminarEstudiante">
+                        Eliminar
+                    </x-danger-button>
+                </div>
+            </section>
+        </div>
+    </x-modal>
 
 </div>

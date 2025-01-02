@@ -16,10 +16,10 @@ return new class extends Migration
 
             $table->string('nombre');
             $table->string('apellidos');
-            $table->enum('sexo', ['masculino', 'femenino']);
+            $table->string('sexo', ['Masculino', 'Femenino']);
             $table->text('direccion')->nullable();
-            $table->date('fecha_nacimiento');
-            
+            $table->integer('fecha_nacimiento');
+
             $table->timestamps();
         });
     }
