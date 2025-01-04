@@ -11,7 +11,7 @@
             <!--Nombre-->
             <x-forms.form-input
                 id="nombre"
-                name="nombre"
+                name="asignatura.nombre"
                 value="{{ $asignatura['nombre'] }}"
                 label="Nombre"
                 type="text"
@@ -19,7 +19,7 @@
 
             <x-forms.form-input
             id="descripcion"
-            name="descripcion"
+            name="asignatura.descripcion"
             value="{{ $asignatura['nombre'] }}"
             label="Descripcion"
             type="text"

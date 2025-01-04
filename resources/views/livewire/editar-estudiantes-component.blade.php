@@ -11,7 +11,7 @@
             <!--Nombre-->
             <x-forms.form-input
                 id="nombre"
-                name="nombre"
+                name="estudiante.nombre"
                 value="{{ $estudiante['nombre'] }}"
                 label="Nombre"
                 type="text"
@@ -19,7 +19,7 @@
 
             <x-forms.form-input
                 id="apellidos"
-                name="apellidos"
+                name="estudiante.apellidos"
                 value="{{ $estudiante['apellidos'] }}"
                 label="Apellidos"
                 type="text"
@@ -27,7 +27,7 @@
 
             <x-forms.form-input
             id="direccion"
-            name="direccion"
+            name="estudiante.direccion"
             value="{{ $estudiante['direccion'] }}"
             label="Dirección"
             type="text"
@@ -38,7 +38,7 @@
 
             <x-forms.form-input
                 id="fecha_nacimiento"
-                name="fecha nacimiento"
+                name="estudiante.fecha_nacimiento"
                 value="{{ $estudiante['fecha_nacimiento'] }}"
                 label="fecha de nacimiento"
                 type="text"
@@ -47,7 +47,7 @@
 
             <x-forms.form-select
             id="sexo"
-            name="sexo"
+            name="estudiante.sexo"
             value="{{ $estudiante['sexo'] }}"
             label="Genero"
             :data="$sexoEstudiante"
