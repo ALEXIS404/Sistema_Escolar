@@ -1,7 +1,7 @@
 @php
     $navigation = [
         [
-            'name' => 'Panel de control',
+            'name' => 'Colegio',
             'route' => 'dashboard',
         ],
         [
