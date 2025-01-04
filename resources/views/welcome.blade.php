@@ -20,7 +20,7 @@
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                            Cerrar Sesión
                         </a>
-                        <form id="logout-form" action="{{ route('logo ut') }}" method="POST" class="hidden">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             @csrf
                         </form>
                     @else
