@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('estudiante_id')->constrained('estudiantes')->onDelete('cascade');
+            $table->foreignId('horarios_id')->constrained('horarios')->onDelete('cascade');
             $table->string('grado');
             $table->year('año_ingreso');
             $table->date('fecha_matricula');
