@@ -17,7 +17,7 @@ public function guardar(Request $request)
     ]);
     // Guardar la Asignatura
     Asignatura::create($request->all());
-    // Redireccionar a la lista de Estudiantes
+    // Redireccionar a la lista de Asignaturas
 
     return redirect(route('asignaturas'));
 }

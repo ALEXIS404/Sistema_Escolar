@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('nombre');
             $table->string('apellidos');
-            $table->string('sexo', ['Masculino', 'Femenino']);
+            $table->string('sexo');
             $table->text('direccion')->nullable();
             $table->integer('fecha_nacimiento');
 

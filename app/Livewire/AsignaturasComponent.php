@@ -31,3 +31,4 @@ class AsignaturasComponent extends Component
         redirect(route('asignaturas'));
     }
 }
+

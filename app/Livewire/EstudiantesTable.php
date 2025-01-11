@@ -33,7 +33,7 @@ class EstudiantesTable extends DataTableComponent
            // Column::make("Fecha nacimiento", "fecha_nacimiento")->sortable(),
             //Column::make("Created at", "created_at") ->sortable(),
            // Column::make("Updated at", "updated_at") ->sortable(),
-           Column::make('id')->format(fn ($value, $row, Column $column) => view('livewire.acciones.estudiantes.acciones')->withValue($value))
+           Column::make('id')->format(fn ($value, $row, Column $column) => view('livewire.acciones.acciones.estudiantes')->withValue($value))
 
         ];
     }

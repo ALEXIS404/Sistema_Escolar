@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('matriculas', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('estudiante_id')->constrained('estudiantes')->onDelete('cascade');
-            $table->foreignId('horarios_id')->constrained('horarios')->onDelete('cascade');
+            $table->string('estudiante_id');
+            $table->string('horarios_id');
             $table->string('grado');
             $table->year('año_ingreso');
             $table->date('fecha_matricula');

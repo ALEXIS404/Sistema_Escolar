@@ -22,6 +22,7 @@ public function guardar(Request $request)
         'direccion' => 'required',
         'fecha_nacimiento' => 'required',
     ]);
+    
     // Guardar el estudiante
     Estudiante::create($request->all());
     // Redireccionar a la lista de Estudiantes

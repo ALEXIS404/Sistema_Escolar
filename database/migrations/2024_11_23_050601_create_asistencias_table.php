@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('asistencias', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('estudiante_id')->constrained('estudiantes')->onDelete('cascade');
-            $table->foreignId('horario_id')->constrained('horarios')->onDelete('cascade');
+            $table->integer('estudiante_id');
+            $table->integer('horario_id');
             $table->date('fecha');
             $table->enum('asistencia', ['presente', 'ausente', 'justificado']);
 

@@ -9,5 +9,15 @@ trait Globalable
         2 => 'Masculino',
     ];
 
+    public array $estadoMatricula =[
+        1 => 'Activa',
+        2 => 'Inactiva',
+    ];
+
+    public array $asistenciaEstudiante =[
+        1 => 'Presente',
+        2 => 'Aucente',
+        2 => 'Justicado',
+    ];
 
 }

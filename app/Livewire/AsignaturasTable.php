@@ -30,9 +30,11 @@ class AsignaturasTable extends DataTableComponent
             Column::make("Updated at", "updated_at")
                 ->sortable(),
 
-                Column::make('id')->format(fn ($value, $row, Column $column) => view('livewire.acciones.estudiantes.botones')->withValue($value))
+                Column::make('id')->format(fn ($value, $row, Column $column) => view('livewire.acciones.acciones.asignaturas')->withValue($value))
 
 
         ];
     }
 }
+
+

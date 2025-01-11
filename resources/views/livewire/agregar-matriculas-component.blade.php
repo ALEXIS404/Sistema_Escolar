@@ -2,34 +2,35 @@
     <x-header title="Registro de un nuevo Estudiante" />
     <x-section-header
         title="Datos del Estudiante "
-        subtitle="Ingrese toda la información para el registro de un nuevo Estudiante">
+        subtitle="Ingrese toda la información para el registro de una nueva matricula">
 
         <!-- Formulario -->
-        <form method="post" action="{{ route('estudiantes.guardar') }}" >
+        <form method="post" action="{{ route('matriculas.guardar') }}" >
             @csrf
             <div class=" grid grid-cols-2 gap-4">
             <!--Nombre-->
             <x-forms.form-input
-                id="nombre"
-                name="nombre"
+                id="estudiante_id"
+                name="estudiante_id"
                 value=""
-                label="Nombre"
+                label="estudiante id"
+                type="text"
+            />
+            
+
+            <x-forms.form-input
+                id="grado"
+                name="grado"
+                value=""
+                label="Grado"
                 type="text"
             />
 
             <x-forms.form-input
-                id="apellidos"
-                name="apellidos"
-                value=""
-                label="Apellidos"
-                type="text"
-            />
-
-            <x-forms.form-input
-            id="direccion"
-            name="direccion"
+            id="año_ingreso"
+            name="año_ingreso"
             value=""
-            label="Dirección"
+            label="Año de ingreso"
             type="text"
         />
 
@@ -37,20 +38,20 @@
 
 
             <x-forms.form-input
-                id="fecha_nacimiento"
-                name="fecha_nacimiento"
+                id="fecha_matricula"
+                name="fecha_matricula"
                 value=""
-                label="fecha de nacimiento"
+                label="fecha de Matricula"
                 type="date"
             />
 
 
             <x-forms.form-select
-            id="sexo"
-            name="sexo"
+            id="estado"
+            name="estado"
             value=""
-            label="Genero"
-            :data="$sexoEstudiante"
+            label="Estado"
+            :data="$estadoMatricula"
         >
 
         </x-forms.form-select>
